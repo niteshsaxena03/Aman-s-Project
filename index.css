@@ -1,0 +1,1502 @@
+/* ==========================================
+   SASTA KHOJO - ULTRA FLASHY PREMIUM DESIGN
+   Major Project Edition - Maximum Visual Impact!
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&family=Orbitron:wght@700;900&display=swap');
+
+/* ==========================================
+   CSS VARIABLES - VIBRANT COLOR PALETTE
+   ========================================== */
+:root {
+    /* Primary Colors - Electric Blue Theme */
+    --primary-100: #dbeafe;
+    --primary-200: #bfdbfe;
+    --primary-300: #93c5fd;
+    --primary-400: #60a5fa;
+    --primary-500: #3b82f6;
+    --primary-600: #2563eb;
+    --primary-700: #1d4ed8;
+    --primary-800: #1e40af;
+    
+    /* Accent Colors - Vibrant Gradients */
+    --accent-orange: #ff6b35;
+    --accent-pink: #ff006e;
+    --accent-purple: #8338ec;
+    --accent-cyan: #00d9ff;
+    --accent-green: #06ffa5;
+    --accent-yellow: #ffbe0b;
+    
+    /* Neon Colors for Effects */
+    --neon-blue: #00d9ff;
+    --neon-pink: #ff006e;
+    --neon-purple: #bf00ff;
+    --neon-green: #39ff14;
+    
+    /* Neutral Colors */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+    
+    /* Background & Surface */
+    --bg-primary: #0a0e27;
+    --bg-secondary: #131829;
+    --bg-tertiary: #1a1f3a;
+    --surface: linear-gradient(145deg, #1a1f3a, #0f1320);
+    --surface-glow: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.05));
+    
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #c7d2fe;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+    
+    /* Gradients - FLASHY! */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-fire: linear-gradient(135deg, #ff6b35 0%, #ff006e 50%, #8338ec 100%);
+    --gradient-ocean: linear-gradient(135deg, #00d9ff 0%, #3b82f6 50%, #8338ec 100%);
+    --gradient-sunset: linear-gradient(135deg, #ff6b35 0%, #ffbe0b 50%, #06ffa5 100%);
+    --gradient-neon: linear-gradient(135deg, #00d9ff 0%, #bf00ff 100%);
+    --gradient-rainbow: linear-gradient(90deg, #ff006e 0%, #ff6b35 20%, #ffbe0b 40%, #06ffa5 60%, #00d9ff 80%, #8338ec 100%);
+    
+    /* Shadows - Subtle & Professional */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.5);
+    --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.6);
+    --shadow-neon-blue: 0 0 15px rgba(0, 217, 255, 0.25);
+    --shadow-neon-pink: 0 0 15px rgba(255, 0, 110, 0.25);
+    --shadow-neon-purple: 0 0 15px rgba(131, 56, 236, 0.25);
+    --shadow-neon-green: 0 0 15px rgba(6, 255, 165, 0.25);
+    
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+    
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-display: 'Poppins', 'Inter', sans-serif;
+    --font-tech: 'Orbitron', 'Courier New', monospace;
+}
+
+/* ==========================================
+   GLOBAL RESET & BASE STYLES
+   ========================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-primary);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* ==========================================
+   ANIMATED BACKGROUND - ULTRA FLASHY!
+   ========================================== */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+    background: radial-gradient(circle at 20% 50%, rgba(131, 56, 236, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 90%, rgba(255, 0, 110, 0.1) 0%, transparent 50%),
+                var(--bg-primary);
+}
+
+.animated-bg::before,
+.animated-bg::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 20s ease-in-out infinite;
+}
+
+.animated-bg::before {
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.3) 0%, transparent 70%);
+    top: -400px;
+    right: -300px;
+    animation: float 15s ease-in-out infinite, glow 3s ease-in-out infinite;
+}
+
+.animated-bg::after {
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(circle, rgba(131, 56, 236, 0.25) 0%, transparent 70%);
+    bottom: -500px;
+    left: -400px;
+    animation: float 20s ease-in-out infinite reverse, glow 4s ease-in-out infinite 1s;
+}
+
+/* Animated gradient orbs */
+body::before {
+    content: '';
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.2) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse-big 8s ease-in-out infinite, rotate 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(50px, -50px) rotate(10deg); }
+    50% { transform: translate(-30px, 30px) rotate(-10deg); }
+    75% { transform: translate(30px, 20px) rotate(5deg); }
+}
+
+@keyframes glow {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+@keyframes pulse-big {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.5; }
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ==========================================
+   CONTAINER & LAYOUT
+   ========================================== */
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* ==========================================
+   HEADER - MEGA FLASHY!
+   ========================================== */
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.logo-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.logo-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-neon);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    animation: float 6s ease-in-out infinite;
+    position: relative;
+}
+
+.logo-icon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-ocean);
+    border-radius: var(--radius-xl);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+@keyframes pulse-logo {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+@keyframes rotate-border {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.main-title {
+    font-family: var(--font-tech);
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+.main-title::after {
+    content: '🛍️';
+    position: absolute;
+    right: -60px;
+    top: -10px;
+    font-size: 3rem;
+}
+
+@keyframes rainbow-text {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes glow-text {
+    0%, 100% { filter: none; }
+    50% { filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.3)); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(-10deg); }
+    75% { transform: translateY(-10px) rotate(10deg); }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.highlight-badge {
+    display: inline-block;
+    background: var(--gradient-fire);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--radius-full);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    box-shadow: var(--shadow-md);
+    animation: slideInUp 1s ease-out 0.5s both;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes pulse-badge {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* ==========================================
+   AUTH SECTION
+   ========================================== */
+.auth-controls {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 100;
+    animation: slideInRight 0.8s ease-out;
+}
+
+.user-display {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--gradient-ocean);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-md);
+    font-weight: 700;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes glow-border {
+    0%, 100% { border-color: rgba(255, 255, 255, 0.2); }
+    50% { border-color: rgba(255, 255, 255, 0.3); }
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    backdrop-filter: blur(10px);
+}
+
+.login-container {
+    max-width: 500px;
+    margin: 5rem auto;
+    padding: 3rem;
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    animation: fadeInUp 0.8s ease-out;
+    border: 2px solid rgba(131, 56, 236, 0.3);
+}
+
+.login-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   SEARCH SECTION - ULTRA FLASHY
+   ========================================== */
+.search-section {
+    margin-bottom: 3rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.search-card {
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.search-card:hover {
+    box-shadow: var(--shadow-2xl);
+    transform: translateY(-2px);
+    border-color: rgba(0, 217, 255, 0.4);
+}
+
+.search-label {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+.search-wrapper {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 300px;
+    padding: 1.25rem 1.75rem;
+    font-size: 1.125rem;
+    border: 3px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--radius-xl);
+    background: rgba(26, 31, 58, 0.6);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    background: rgba(26, 31, 58, 0.8);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.15), 
+                inset 0 2px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-1px);
+}
+
+.search-input::placeholder {
+    color: var(--text-tertiary);
+}
+
+/* ==========================================
+   BUTTONS - MEGA FLASHY!
+   ========================================== */
+.btn {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--radius-xl);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: var(--font-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--gradient-ocean);
+    color: white;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-secondary {
+    background: rgba(26, 31, 58, 0.8);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    border: 2px solid rgba(59, 130, 246, 0.4);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: rgba(26, 31, 58, 0.95);
+    border-color: var(--neon-cyan);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background: var(--gradient-fire);
+    color: white;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-accent:hover:not(:disabled) {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.btn-ghost:hover:not(:disabled) {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--text-primary);
+    border-color: var(--neon-cyan);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-sm {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   LOADING INDICATOR - FLASHY SPINNER
+   ========================================== */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5rem 2rem;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 6px solid rgba(59, 130, 246, 0.2);
+    border-top-color: var(--neon-cyan);
+    border-right-color: var(--primary-500);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    box-shadow: var(--shadow-sm);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 700;
+}
+
+@keyframes pulse-text {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+/* ==========================================
+   RESULTS SECTION
+   ========================================== */
+.results-container {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.results-title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.results-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+/* ==========================================
+   PRODUCT PREVIEW - ULTRA FLASHY
+   ========================================== */
+.product-preview {
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-2xl);
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(131, 56, 236, 0.3);
+    animation: scaleIn 0.6s ease-out;
+    position: relative;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.product-image {
+    width: 140px;
+    height: 140px;
+    background: var(--gradient-fire);
+    border-radius: var(--radius-2xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-name {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.product-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.meta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease;
+}
+
+.meta-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-neon-blue);
+    border-color: var(--neon-cyan);
+}
+
+.product-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.highlight-card {
+    padding: 2rem;
+    background: rgba(26, 31, 58, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-xl);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+}
+
+.highlight-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: var(--shadow-md);
+    border-color: var(--neon-cyan);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.highlight-value {
+    font-size: 1.75rem;
+    font-weight: 900;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   COMPARISON TABLE - FLASHY AF
+   ========================================== */
+.table-container {
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    margin-bottom: 3rem;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table thead {
+    background: var(--gradient-ocean);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 217, 255, 0.3);
+}
+
+.comparison-table th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.comparison-table td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--text-primary);
+}
+
+.comparison-table tbody tr {
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease-out both;
+    background: rgba(26, 31, 58, 0.3);
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(59, 130, 246, 0.15);
+    transform: scale(1.01);
+    box-shadow: inset 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+.comparison-table tbody tr:nth-child(1) { animation-delay: 0.1s; }
+.comparison-table tbody tr:nth-child(2) { animation-delay: 0.2s; }
+.comparison-table tbody tr:nth-child(3) { animation-delay: 0.3s; }
+.comparison-table tbody tr:nth-child(4) { animation-delay: 0.4s; }
+.comparison-table tbody tr:nth-child(5) { animation-delay: 0.5s; }
+
+.retailer-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.retailer-logo {
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-fire);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.price-cell {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.best-deal-badge {
+    display: inline-block;
+    background: var(--gradient-sunset);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+    margin-left: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes shimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status-available {
+    background: rgba(6, 255, 165, 0.15);
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+}
+
+/* ==========================================
+   CHARTS SECTION - GLOWING!
+   ========================================== */
+.charts-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.chart-card {
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(131, 56, 236, 0.3);
+    transition: all 0.3s ease;
+    max-width: 600px;
+    width: 100%;
+}
+
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2xl);
+}
+
+.chart-title {
+    font-size: 1.75rem;
+    font-weight: 900;
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.chart-canvas {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3));
+    display: block;
+    margin: 0 auto;
+}
+
+.chart-legend {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+    background: rgba(26, 31, 58, 0.4);
+}
+
+.legend-item:hover {
+    background: rgba(59, 130, 246, 0.15);
+    transform: translateX(5px);
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.legend-label {
+    flex: 1;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.legend-value {
+    font-weight: 900;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+   RETAILER OFFERS - MEGA FLASHY
+   ========================================== */
+.retailer-offers {
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    padding: 3rem;
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-xl);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    margin-bottom: 3rem;
+}
+
+.retailer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.retailer-card {
+    padding: 2rem;
+    background: rgba(26, 31, 58, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--radius-xl);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.retailer-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--neon-cyan);
+}
+
+.retailer-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.retailer-card-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-ocean);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.retailer-card-info {
+    flex: 1;
+}
+
+.retailer-card-name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.retailer-card-offer {
+    font-size: 1rem;
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.retailer-card-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ==========================================
+   MODALS - FLASHY!
+   ========================================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--surface-glow);
+    backdrop-filter: blur(30px);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-2xl);
+    max-width: 700px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideInUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(131, 56, 236, 0.4);
+}
+
+.modal-header {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-title {
+    font-size: 2rem;
+    font-weight: 900;
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-close {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: rgba(255, 0, 110, 0.2);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.modal-close:hover {
+    background: rgba(255, 0, 110, 0.4);
+    transform: scale(1.1) rotate(90deg);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    padding: 2rem;
+    border-top: 1px solid rgba(59, 130, 246, 0.3);
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+/* ==========================================
+   FORM ELEMENTS
+   ========================================== */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    border-radius: var(--radius-lg);
+    background: rgba(26, 31, 58, 0.6);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    font-family: var(--font-primary);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    background: rgba(26, 31, 58, 0.8);
+    box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.15);
+}
+
+/* ==========================================
+   MESSAGE BOX / TOAST
+   ========================================== */
+.message-box {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    max-width: 400px;
+    padding: 1.5rem;
+    background: var(--surface-glow);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    border-left: 4px solid var(--neon-cyan);
+    z-index: 1000;
+    animation: slideInRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: none;
+    color: var(--text-primary);
+}
+
+.message-box.show {
+    display: block;
+}
+
+.message-box.success {
+    border-left-color: var(--neon-green);
+}
+
+.message-box.error {
+    border-left-color: var(--neon-pink);
+}
+
+.message-box.warning {
+    border-left-color: var(--accent-yellow);
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+   FLOATING ACTION BUTTONS
+   ========================================== */
+.floating-actions {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 150;
+}
+
+.fab {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gradient-ocean);
+    color: white;
+    border: none;
+    box-shadow: var(--shadow-xl);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: all 0.3s ease;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.fab:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: var(--shadow-2xl);
+}
+
+.fab:active {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.fab:nth-child(2) {
+    background: var(--gradient-fire);
+}
+
+.fab-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: var(--gradient-sunset);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 900;
+    border: 3px solid var(--bg-primary);
+    box-shadow: var(--shadow-md);
+}
+
+/* ==========================================
+   UTILITIES
+   ========================================== */
+.hidden { display: none !important; }
+.text-center { text-align: center; }
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+    .app-container {
+        padding: 2rem 1rem;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .main-title::after {
+        right: -40px;
+        font-size: 2rem;
+    }
+    
+    .search-wrapper {
+        flex-direction: column;
+    }
+    
+    .search-input {
+        min-width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .product-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .product-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .comparison-table {
+        min-width: 700px;
+    }
+    
+    .charts-section {
+        flex-direction: column;
+    }
+    
+    .retailer-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .auth-controls {
+        position: static;
+        justify-content: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .floating-actions {
+        bottom: 2rem;
+        right: 2rem;
+    }
+    
+    .fab {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem;
+    }
+    
+    .message-box {
+        left: 1rem;
+        right: 1rem;
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 1.5rem 0.75rem;
+    }
+    
+    .logo-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .product-image {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+    
+    .product-name {
+        font-size: 1.5rem;
+    }
+    
+    .comparison-table th,
+    .comparison-table td {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+*:focus-visible {
+    outline: 3px solid var(--neon-cyan);
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   SCROLLBAR STYLING
+   ========================================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-ocean);
+    border-radius: var(--radius-full);
+    border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-fire);
+}
